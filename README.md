@@ -18,7 +18,7 @@ Strong attention to detail and ability to write clean, well-documented code.
 
 ## Instructions:
 
-Fork the provided GitHub repository [repository URL] to create your own copy.
+Fork this repository [[repository URL](https://github.com/AIS-recruiting/engineer-intern)] to create your own copy.
 	
 Clone the forked repository to your local development environment.
 	
@@ -29,13 +29,7 @@ In the repository, you will find a sample CSV file named "data.csv". Write a Pyt
 - d. Create a new table in the database to store the transformed data. 
 - e. Insert the transformed data into the newly created table.
 	
-Commit your code changes to your local Git repository.
-	
-Push your code to the remote repository on your forked GitHub repository.
-	
-Create a new branch named "submission" and push your changes to that branch.
-	
-Open a pull request from the "submission" branch to the main branch of the original repository.
+When your code and branch is ready, open a pull request from the "submission" branch to the main branch of the original repository.
 
 
 ## Submission Guidelines:
