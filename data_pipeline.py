@@ -2,7 +2,7 @@ import pandas as pd
 import sqlite3
 
 # Import CSV
-data = pd.read_csv ('data.csv',na_values = "Null")
+data = pd.read_csv ('data.csv',na_values = ["Null"," ",""])
 df = pd.DataFrame(data)
 
 # Key consistency

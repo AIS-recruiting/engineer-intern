@@ -58,8 +58,8 @@ dtype: object
 ```
 This list says that the first two columns are real numbers, but according to **pandas**, others
 contain characters and are considered as string objects. After checking for non-numeric characters in these columns,
-some missing values were found - *NA* and *Null* [ e.g. lines 33,1987 or 2108 ]. To take care of this, special parameter
-```na_values = 'Null'``` is added to the .csv reader ('Null' is not included in default NaN values, see 
+some missing values were found - *NA*, *Null* or empty space. [ e.g. lines 33,1987 or 2108 ]. To take care of this, special parameter
+```na_values = ["Null"," ",""]``` is added to the .csv reader (these are not included in default NaN values, see 
 [pandas.read_csv documentation](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)).
 To maintain appropriate table structure, each column (except the last two) was changed to 'float64' type:
 
