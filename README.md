@@ -1,5 +1,5 @@
 # Data engineer recruiting task submission
-## Author: Matej Koreň, 19.7.2023
+## Author: Matej Koreň,20.7.2023
 
 ## Task Description: 
 Create a Python script named "data_pipeline.py" that performs the following tasks:
@@ -20,8 +20,8 @@ insertion is handled in the script.
 ___
 ## Solution
 ### Data manipulation
-Firstly, the 'data.csv' was loaded and converted into a dataframe ( **df** ). It is possible to obtain information about its 
-structure and values:
+Firstly, the 'data.csv' was loaded ( pandas.reads_csv() ) and converted into a dataframe ( pandas.DataFrame() ).
+After this, it's possible to obtain information about its structure and values:
 
 ```print(df.shape)```
  
@@ -60,8 +60,9 @@ This list says that the first two columns are real numbers, but according to **p
 contain characters and are considered as string objects. After checking for non-numeric characters in these columns,
 some missing values were found - *NA*, *Null* or empty space. [ e.g. lines 33,1987 or 2108 ]. To take care of this, special parameter
 ```na_values = ["Null"," ",""]``` is added to the .csv reader (these are not included in default NaN values, see 
-[pandas.read_csv documentation](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)).
-To maintain appropriate table structure, each column (except the last two) was changed to 'float64' type:
+[pandas.read_csv documentation](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)). This action helps to navigate
+through the data more effectively. Alternatively ( depending on the further usage ), improper values can be dropped from the set, which would reduce 
+the size of the set. To maintain appropriate table structure, each column (except the last two - deducted from their values) was changed to 'float64' type:
 
 ```
 cols = df.columns.drop(df.iloc[:,-2:])                          # last two collumns are dropped
@@ -89,20 +90,20 @@ To verify the table structure, we can query the database:
 SELECT name, type FROM pragma_table_info('real_estates')
 ```
 
-|        name        |   type  |
+|        name        |  type   |
 |:------------------:|:-------:|
 |         ID         | INTEGER |
-|      LONGITUDE     |   REAL  |
-|         LAT        |   REAL  |
-|     MEDIAN_AGE     |   REAL  |
-|        ROOMS       |   REAL  |
-|      BEDROOMS      |   REAL  |
-|         POP        |   REAL  |
-|     HOUSEHOLDS     |   REAL  |
-|    MEDIAN_INCOME   |   REAL  |
-| MEDIAN_HOUSE_VALUE |   REAL  |
-|   OCEAN_PROXIMITY  |   TEXT  |
-|       AGENCY       |   TEXT  |
+|     LONGITUDE      |  REAL   |
+|        LAT         |  REAL   |
+|     MEDIAN_AGE     |  REAL   |
+|       ROOMS        |  REAL   |
+|      BEDROOMS      |  REAL   |
+|        POP         |  REAL   |
+|     HOUSEHOLDS     |  REAL   |
+|   MEDIAN_INCOME    |  REAL   |
+| MEDIAN_HOUSE_VALUE |  REAL   |
+|  OCEAN_PROXIMITY   |  TEXT   |
+|       AGENCY       |  TEXT   |
 
 ___
 #### Footnote
