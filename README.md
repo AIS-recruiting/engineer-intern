@@ -9,7 +9,7 @@ For correct behavior of script, please ensure you have installed all needed libr
 
 ## Description:
 
-Provided script ``data_pipeline.py`` loads data from 'data.csv' file and clears data of any rows with missing values, converts 'object' values into corresponding numeric values (casts to int/float) and converts colummns names to title case. Then it stores data into sqlite db. Name of db is *task.db* and name of table is *engineer-intern_table*. You can access data in db via cmd, using commands: ``sqlite3 example.db`` and then ``SELECT * FROM 'engineer-intern_table';``.
+Provided script ``data_pipeline.py`` loads data from 'data.csv' file, converts columns names to title case, then converts 'object' values into corresponding numeric values (casts to int/float), filling missing values with median and dropping duplicates. Then it stores data into sqlite db. Name of db is *task.db* and name of table is *engineer-intern_table*. You can access data in db via cmd, using commands: ``sqlite3 example.db`` and then ``SELECT * FROM 'engineer-intern_table';``.
 
 ## Additional information:
 
