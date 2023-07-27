@@ -18,6 +18,7 @@ def csv_to_sqlite():
                    dtype={'resort_id': 'INTEGER PRIMARY KEY',
                           'longitude': 'REAL NOT NULL',
                           'latitude': 'REAL NOT NULL'})
+    conn.commit()
     conn.close()
 
 
