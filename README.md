@@ -5,9 +5,14 @@ In this project, you will find a pipeline that transforms a CSV file into an SQL
 The project includes two approaches, the default approach is using pandas, and is simpler and faster. The second approach is implemented from scratch and demonstrates a more universal approach.
 
 ## Instructions:
+
+
 You can run the script without an argument that uses the default approach (pandas) ```python data_pipeline.py```.
 <br>
 Or you can use the flag to determine the mode ```python data_pipeline.py --mode pandas```, ```python data_pipeline.py --mode naive```.
+
+## Dependencies
+In order to run the project install pandas library ```pip install pandas```.
 
 ## Task description:
 The script performs the following tasks: 
