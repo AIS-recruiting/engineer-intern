@@ -11,7 +11,7 @@ You can run the script without an argument that uses the default approach (panda
 <br>
 Or you can use the flag to determine the mode ```python data_pipeline.py --mode pandas```, ```python data_pipeline.py --mode naive```.
 
-## Dependencies
+## Dependencies:
 In order to run the project install pandas library ```pip install pandas```.
 
 ## Task description:
