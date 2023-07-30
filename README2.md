@@ -19,7 +19,7 @@ pip install pandas
 pip install numpy
 ```
 
-_Please also note that you may want to use pip3 instead of 'pip'._
+_Please also note that you may want to use 'pip3' instead of 'pip'._
 
 3. The main script is 'data_pipeline.py', which performs the following tasks:
     - read data from CSV file 'data.csv'.
