@@ -2,7 +2,7 @@
 # Data Pipeline Project 
 
 ## Introduction 
-This project is a simple data pipeline that exctracts data from a CSV file, performs some transformations and loads the data into a SQLite database.
+This project is a simple data pipeline that extracts data from a CSV file, performs some transformations and loads the data into a SQLite database.
 
 ## Requirements 
 - Python 3.8 or later 
